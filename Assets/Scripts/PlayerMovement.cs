@@ -18,9 +18,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         change = Vector2.zero;
-        change.x = Input.GetAxis("Horizontal");
-        change.y = Input.GetAxis("Vertical");
-
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
         playerRigidBody.velocity = change * speed;
     }
 
